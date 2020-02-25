@@ -19,9 +19,8 @@ while True:
 
     INTERVAL = 60*60*random.random()*5
     delta = datetime.datetime(2020, 2, 28) - datetime.datetime.now()
-    secs = delta.seconds - (3600*7)
-    hours = str(int(secs/3600))
-    minutes = str(int(secs/60)-(int(hours) * 60 ))
+    hours = str(int(delta.seconds/3600))
+    minutes = str(int(delta.seconds/60)-(int(hours) * 60 ))
 
     api.update_status(str(delta.days + 1 ) + " Days " + hours + " Hours " + minutes + " minutes left till the Georgia Tech Summer Transfer Decision")
 
