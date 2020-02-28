@@ -17,7 +17,7 @@ api = tweepy.API(auth)
 
 while True:
 
-    INTERVAL = 60*60*random.random()*5
+    INTERVAL = 60**random.random()*10
     delta = datetime.datetime(2020, 2, 28) - datetime.datetime.now()
     hours = str(int(delta.seconds/3600))
     minutes = str(int(delta.seconds/60)-(int(hours) * 60 ))
